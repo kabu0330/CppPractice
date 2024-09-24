@@ -1,57 +1,47 @@
 ﻿#include <iostream>
 
-int NumberCount(int _Value)
+int MyPrintf(const char* const _Ptr, ...)
 {
-    int Result = 0;
+    const int ParameterInter = 8;
 
-    while (_Value)
+    __int64 IntAddress = reinterpret_cast<__int64>(_Ptr);
+
+    int ArrIndex = 0;
+    while (_Ptr[ArrIndex])
     {
-        _Value /= 10;
-        Result += 1;
+        char Char = _Ptr[ArrIndex];
+
+        if (Char == '%')
+        {
+            Char == _Ptr[ArrIndex + 1];
+
+            switch (Char)
+            {
+            case 'd': // 정수일 때
+            {
+                int* Ptr = reinterpret_cast<int*>(IntAddress + ParameterInter);
+
+                break;
+            }
+            default:
+            {
+                break;
+            }
+            }
+          
+        }
+        // 한 글자씩 출력해주는 함수 : putchar
+        putchar(_Ptr[ArrIndex]); 
+        ArrIndex++; // 반복문 종료 조건식
     }
-    return Result;
+
+    return 0;
 }
-
-int TenPow(int _Value)
-{
-    int Result = 10;
-    for (int i = 0; i < _Value - 1; i++)
-    {
-        Result *= 10;
-    }
-    return Result;
-}
-
-void NumberToString(char* Buffer, int BufferSize, int _Value)
-{
-    // 3자리
-    int ValueCount = NumberCount(_Value);
-    
-    int Digits[10] = { 0 };
-    for (int i = 0; i < ValueCount; i++)
-    {
-        Digits[i] = 
-    }
-
-    char Ch = '0';
-
-    
-
-    
-
-}
-
 
 int main()
 {
-    int Result = NumberCount(1230);
+    MyPrintf("Number : %d/n", 12345);
 
-    int Pow = TenPow(3);
-
-    char Arr[100] = { 0 };
-    NumberToString(Arr, 100, 123);
-
-    Arr;
 
     return 0;
 }
