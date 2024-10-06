@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="003_TextRPG.cpp" />
+    <ClCompile Include="EngineConst.cpp">
+      <Filter>0_Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="FightUnit.cpp">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusUnit.cpp">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>1_Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Zone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Town.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="FightZone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="0_Base">
+      <UniqueIdentifier>{70f014b4-872c-4560-bc18-ea0efa3755f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1_Engine">
+      <UniqueIdentifier>{0c94166a-a675-4007-9671-c0a063052984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents">
+      <UniqueIdentifier>{d20b8f46-b916-4620-8315-d870c3ebd961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\0_ContentsBase">
+      <UniqueIdentifier>{de5d4aa5-8fc2-4d35-b2e7-3a886ddcb67c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\1_Actor">
+      <UniqueIdentifier>{cbdad50c-f76b-4eda-9422-5a75503f024d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\2_Map">
+      <UniqueIdentifier>{2bef5366-5e19-498c-840b-88c1ef593f30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineConst.h">
+      <Filter>0_Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="FightUnit.h">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusUnit.h">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>1_Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Zone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Town.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="FightZone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
