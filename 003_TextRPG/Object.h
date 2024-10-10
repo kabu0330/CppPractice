@@ -6,6 +6,8 @@
 class UObject
 {
 public:
+	UObject() {}
+
 	inline const char* GetName()
 	{
 		return Name;

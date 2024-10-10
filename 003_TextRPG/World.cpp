@@ -3,6 +3,7 @@
 #include "Player.h"
 #include <conio.h>
 #include "Town.h"
+#include "FightZone.h"
 
 void UWorld::PlayerNameSelect(UPlayer& _Player)
 {
@@ -40,8 +41,8 @@ void UWorld::PlayerNameSelect(UPlayer& _Player)
 		default:
 			IsEnd = false;
 			IsNameInput = false;
-			printf_s("잘못된 선택입니다. 다시 입력해주세요. \n", InputName);
-			_getch();
+			printf_s("잘못된 선택입니다. 다시 입력해주세요. \n");
+			//_getch();
 			break;
 		}
 
@@ -56,11 +57,19 @@ void UWorld::PlayerNameSelect(UPlayer& _Player)
 
 void UWorld::PlayerZonePlay(UPlayer& _Player)
 {
-	UTown TownZone;
-	TownZone.SetName("초보마을");
+	ZoneInit();
+	
 
 }
 
+void UWorld::ZoneInit()
+{
+	UTown TownZone;
+	TownZone.SetName("초보마을");
+
+	UFightZone FightZone;
+	FightZone.SetName("초보사냥터");
+}
 
 void UWorld::InPlayer(UPlayer& _Player)
 {

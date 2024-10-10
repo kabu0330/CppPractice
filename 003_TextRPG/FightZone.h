@@ -1,9 +1,10 @@
 #pragma once
-class UFightZone
+#include "Object.h"
+	
+class UFightZone : public UObject
 {
 public:
-	UFightZone();
-	~UFightZone();
+
 
 private:
 
