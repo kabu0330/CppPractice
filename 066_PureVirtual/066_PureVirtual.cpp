@@ -14,8 +14,15 @@ public:
 
 int main()
 {
-	//FightUnit Fight;
-	//Player Warrior;
+	Player Warrior;
+
+
+
+
+
+
+
+	FightUnit Fight;
 
 
 

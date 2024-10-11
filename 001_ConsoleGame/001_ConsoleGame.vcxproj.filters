@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ConsoleEngine.cpp" />
+    <ClCompile Include="001_ConsoleGame.cpp" />
+    <ClCompile Include="ConsoleWindow.cpp" />
+    <ClCompile Include="ConsoleImage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleEngine.h" />
+    <ClInclude Include="ConsoleWindow.h" />
+    <ClInclude Include="ConsoleImage.h" />
+  </ItemGroup>
+</Project>
