@@ -7,6 +7,16 @@ typedef int DataType;
 class UVector
 {
 public:
+	~UVector()
+	{
+		if (nullptr != Datas)
+		{
+			delete[] Datas;
+			Datas = nullptr;
+		}
+
+	}
+
 	void reserve(size_t _capacity)
 	{
 		if (CapacityValue > _capacity)
@@ -33,6 +43,41 @@ public:
 
 	}
 
+	void push_back(DataType _Data)
+	{
+		if (SizeValue + 1 > CapacityValue)
+		{
+			reserve(CapacityValue * 1.2); // 정확한 로직은 모른다.
+		}
+
+		Datas[SizeValue] = _Data;
+
+		++SizeValue;
+	}
+
+
+	//DataType* Datas = nullptr;
+	//size_t CapacityValue = 0;
+	//size_t SizeValue = 0;
+
+	//void push_back(DataType _Data)
+	//{
+	//	DataType* PrevData = Datas; // 기존 데이터 복사
+	//	Datas = new DataType[CapacityValue]; // 기존 크기 + 1만큼 동적 할당
+
+	//	for (size_t i = 0; i < SizeValue; i++)
+	//	{
+	//		Datas[i] = PrevData[i]; // 기존 데이터 붙여넣기
+	//	}
+
+	//	delete[] PrevData; // 복사해둔 데이터 메모리 해제
+	//	PrevData = nullptr;
+
+	//	Datas[SizeValue] = _Data; // 신규 데이터 추가
+
+	//	++SizeValue; // 데이터 개수 증가
+	//}
+
 	size_t capacity() const
 	{
 		return CapacityValue;
@@ -48,17 +93,7 @@ public:
 		SizeValue = 0;
 	}
 
-	void push_back(DataType _Data)
-	{
-		if (SizeValue + 1 > CapacityValue)
-		{
-			reserve(CapacityValue * 1.5);
-		}
 
-		Datas[SizeValue] = _Data;
-
-		++SizeValue;
-	}
 
 	DataType& operator[](size_t _index)
 	{

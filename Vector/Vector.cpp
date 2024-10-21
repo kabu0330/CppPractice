@@ -3,6 +3,7 @@
 
 int main()
 {
-
+	int Value = 10;
+	int Arr[Value] = { 0 };
 }
 
